@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avantika Saree Centre And Garments | Luxury Indian Sarees & Ethnic Fashion</title>
+  <meta name="description" content="Handcrafted Banarasi, Kanjivaram silk sarees, bridal lehengas and royal Indian ethnic couture by Avantika Saree Centre And Garments, Thakur Churaha." />
+
+  <!-- Google Fonts: Playfair Display, Cinzel, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Incorporating Bio Highlights: Thakur Churaha Flagship & Direct Weaver Pricing) -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <span class="top-bar-tag">✨ Flagship Boutique: Thakur Churaha</span>
+        <span class="top-bar-separator">•</span>
+        <span>Designer Sarees, Bridal Lehengas & Men's Suiting</span>
+        <span class="top-bar-separator">•</span>
+        <span class="top-bar-tag">Wholesale Integrity & Best Quality Guaranteed</span>
+        <span class="top-bar-separator">•</span>
+        <span>Complimentary White-Glove Insured Delivery Across India</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Luxury Header & Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar-inner">
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="#" class="brand-wrapper" data-nav="home">
+          <span class="brand-logo">
+            AVANTIKA
+            <span class="brand-logo-mark">❦</span>
+          </span>
+          <span class="brand-subtext">Saree Centre & Garments • Thakur Churaha</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li>
+              <a href="#" class="nav-link" data-nav="catalog" data-nav-param="new">
+                New Arrivals
+                <span class="nav-badge-new">New</span>
+              </a>
+            </li>
+            <li><a href="#" class="nav-link" data-nav="catalog" data-nav-param="sarees">Sarees</a></li>
+            <li><a href="#" class="nav-link" data-nav="catalog" data-nav-param="bridal">Bridal</a></li>
+            <li><a href="#" class="nav-link" data-nav="catalog" data-nav-param="lehengas">Lehengas</a></li>
+            <li><a href="#" class="nav-link" data-nav="catalog">Collections</a></li>
+            <li><a href="#editorial-heritage" class="nav-link" onclick="scrollToHeritage(event)">About</a></li>
+          </ul>
+        </nav>
+
+        <!-- Navbar Actions (Search, Wishlist, Cart) -->
+        <div class="nav-actions">
+          <!-- Search Icon Button -->
+          <button class="nav-action-btn" id="btn-open-search" aria-label="Search Collection" title="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Wishlist Icon Button -->
+          <button class="nav-action-btn" id="btn-open-wishlist" aria-label="Saved Wishlist" title="Wishlist" onclick="navigateTo('catalog')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="action-badge" id="nav-wishlist-badge">0</span>
+          </button>
+
+          <!-- Shopping Bag Icon Button -->
+          <button class="nav-action-btn" id="btn-open-cart" aria-label="Shopping Bag" title="Shopping Bag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="action-badge" id="nav-cart-badge">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="brand-logo" style="font-size: 1.35rem;">AVANTIKA</span>
+      <button class="btn-drawer-close" onclick="closeMobileMenu()">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#" class="mobile-nav-link" data-nav="home">Home</a></li>
+      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="new">New Arrivals</a></li>
+      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="sarees">Sarees</a></li>
+      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="bridal">Bridal Atelier</a></li>
+      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="lehengas">Bridal Lehengas</a></li>
+      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="suits">Suits & Kurtis</a></li>
+      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="mens">Men's Suiting</a></li>
+      <li><a href="#" class="mobile-nav-link" data-nav="catalog">All Collections</a></li>
+      <li><a href="#editorial-heritage" class="mobile-nav-link" onclick="closeMobileMenu(); scrollToHeritage(event);">Avantika Heritage</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 2rem; border-top: 1px solid var(--border-subtle); font-size: 0.75rem; color: var(--text-muted);">
+      <strong>Flagship Boutique</strong><br />
+      Thakur Churaha, Kanpur<br />
+      Wholesale & Bespoke Couture
+    </div>
+  </div>
+
+  <!-- Global Drawer Overlay Backdrop -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- =========================================================================
+       MAIN CONTENT CONTAINER (SPA VIEWS)
+       ========================================================================= -->
+  <main id="app-viewport">
+
+    <!-- =======================================================================
+         VIEW 1: HOMEPAGE
+         ======================================================================= -->
+    <section id="view-home" class="fade-in">
+
+      <!-- Hero Banner -->
+      <div class="hero-section">
+        <div class="hero-bg-media">
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1920&q=85" 
+               alt="Avantika Saree Centre And Garments Luxury Model" 
+               class="hero-bg-img" />
+          <div class="hero-overlay-gradient"></div>
+          <div class="hero-overlay-vignette"></div>
+        </div>
+
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-pill-badge">
+              <span class="sparkle">✦</span>
+              Haute Couture Handloom Collection
+            </div>
+            <h1 class="hero-title">
+              Timeless Indian<br />
+              <i>Elegance</i>
+            </h1>
+            <p class="hero-subtitle">
+              Handcrafted silhouettes for celebrations that become memories. Pure katan silks, real tested zari, and royal bridal couture woven with centuries of artistry.
+            </p>
+            <div class="hero-actions">
+              <button class="btn-luxury-primary" onclick="navigateTo('catalog')">
+                Shop Collection
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <button class="btn-luxury-secondary" onclick="navigateTo('catalog', { filterKey: 'category', filterValue: 'bridal' })">
+                Explore Bridal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Highlights Ribbon -->
+        <div class="hero-highlights-strip">
+          <div class="container">
+            <div class="hero-strip-grid">
+              <div class="hero-strip-item">
+                <div class="hero-strip-icon">⚜</div>
+                <div class="hero-strip-text">
+                  <h4>Pure Silk Mark Certified</h4>
+                  <p>100% Authentic Handloom Silk</p>
+                </div>
+              </div>
+              <div class="hero-strip-item">
+                <div class="hero-strip-icon">🧵</div>
+                <div class="hero-strip-text">
+                  <h4>Master Pit Looms</h4>
+                  <p>Banaras, Kanchipuram & Chanderi</p>
+                </div>
+              </div>
+              <div class="hero-strip-item">
+                <div class="hero-strip-icon">🏛</div>
+                <div class="hero-strip-text">
+                  <h4>Thakur Churaha Flagship</h4>
+                  <p>Wholesale Transparency & Heritage</p>
+                </div>
+              </div>
+              <div class="hero-strip-item">
+                <div class="hero-strip-icon">✨</div>
+                <div class="hero-strip-text">
+                  <h4>White-Glove Delivery</h4>
+                  <p>Insured Keepsake Packaging</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Collections Section -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-pretitle">The Royal Edits</div>
+            <h2 class="section-title">Curated Collections</h2>
+            <p class="section-subtitle">
+              From ceremonial pure silk heirlooms to luminous organza gossamer drapes, explore our signature edits crafted for festive grandeur.
+            </p>
+          </div>
+
+          <div class="collections-grid" id="home-collections-grid">
+            <!-- Dynamically populated by JS: Silk Sarees, Bridal Sarees, Organza & Festive Edit -->
+          </div>
+        </div>
+      </section>
+
+      <!-- New Arrivals Product Section -->
+      <section class="section-padding" style="background-color: var(--bg-creme-subtle); border-top: 1px solid var(--border-subtle);">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-pretitle">Fresh from the Looms</div>
+            <h2 class="section-title">New Arrivals</h2>
+            <p class="section-subtitle">
+              Freshly off the shuttle looms of Varanasi and Kanchipuram. Rare colorways, gilded zari motifs, and bespoke festive creations.
+            </p>
+          </div>
+
+          <div class="products-grid" id="home-new-arrivals-grid">
+            <!-- Dynamically populated with demo products including Crimson Banarasi, Ivory Organza Bloom, Rose Gold Tissue, Emerald Heritage, Ruby Bridal, Champagne Zari -->
+          </div>
+
+          <div style="text-align: center; margin-top: 3.5rem;">
+            <button class="btn-luxury-primary" onclick="navigateTo('catalog')">
+              View All Creations (12)
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editorial Storytelling Section: "Woven to Be Remembered" -->
+      <section class="section-padding editorial-story-section" id="editorial-heritage">
+        <div class="container">
+          <div class="editorial-grid">
+
+            <div class="editorial-images-composition">
+              <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1000&q=85" 
+                   alt="Heirloom Weaving Artisan" 
+                   class="editorial-img-main" 
+                   loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=85" 
+                   alt="Bridal Couture Portrait" 
+                   class="editorial-img-sub" 
+                   loading="lazy" />
+              <div class="editorial-seal">
+                <span class="year">EST.</span>
+                <span class="year" style="font-size: 1.3rem;">1994</span>
+                <span class="desc">HAUTE WEAVE</span>
+              </div>
+            </div>
+
+            <div class="editorial-content">
+              <div class="section-pretitle" style="justify-content: flex-start;">Our Heritage & Craftsmanship</div>
+              <h2 class="editorial-quote">
+                “Woven to Be <em>Remembered</em>”
+              </h2>
+              <p class="editorial-body">
+                Every thread in an Avantika creation is an unbroken bridge to India’s imperial weaving dynasties. From the pit looms along the sacred Ghats of Varanasi to the temple workshops of Kanchipuram, our master karigars interlace 208-count mulberry katan silk with real silver and gold tested zari.
+              </p>
+
+              <!-- Bio Information Integration Box: Avantika Saree Centre & Garments -->
+              <div class="avantika-heritage-box">
+                <div class="avantika-box-title">
+                  <span>Avantika Saree Centre & Garments</span>
+                  <span class="tag">Flagship Heritage</span>
+                </div>
+                <p class="avantika-box-text">
+                  Rooted in our iconic flagship boutique at <strong>Thakur Churaha</strong>, we bridge multigenerational craft with contemporary runway poise. Offering wholesale transparency, direct-from-weaver authenticity, and bespoke bridal tailoring for brides and royal grooms across India.
+                </p>
+                <div class="avantika-pillars-list">
+                  <div class="pillar-item"><span>👗</span> Designer Sarees</div>
+                  <div class="pillar-item"><span>✨</span> Bridal Lehengas</div>
+                  <div class="pillar-item"><span>🧵</span> Suits & Kurtis</div>
+                  <div class="pillar-item"><span>🤵</span> Men’s Suiting</div>
+                  <div class="pillar-item"><span>💸</span> Wholesale Value</div>
+                  <div class="pillar-item"><span>📍</span> Thakur Churaha</div>
+                </div>
+              </div>
+
+              <p class="editorial-body" style="margin-bottom: 2rem;">
+                A saree is not merely an outfit; it is family history passed from mother to daughter across generations. When you drape Avantika Saree Centre And Garments, you wear living poetry.
+              </p>
+
+              <button class="btn-luxury-primary" onclick="navigateTo('catalog')">
+                Explore The Heritage Edit
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Large Image-Based Fashion Campaign Banner -->
+      <section class="campaign-spotlight">
+        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1920&q=85" 
+             alt="Avantika Saree Centre Royal Bridal Campaign" 
+             class="campaign-bg-img" />
+        <div class="campaign-container">
+          <div class="campaign-tag">The Bridal Haute Couture Edit</div>
+          <h2 class="campaign-title">The Royal Wedding Suite</h2>
+          <p class="campaign-desc">
+            Heavy bullion zardozi, hand-stitched velvet lehengas, pure vermillion Banarasi silks, and master-tailored men’s sherwanis. Designed for wedding days that become legacy celebrations.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <button class="btn-luxury-primary" onclick="navigateTo('catalog', { filterKey: 'category', filterValue: 'bridal' })">
+              View Bridal Collection
+            </button>
+            <button class="btn-luxury-secondary" onclick="openConsultationModal()">
+              Book Flagship Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials Section -->
+      <section class="section-padding testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-pretitle">Words of Love</div>
+            <h2 class="section-title">The Connoisseur’s Circle</h2>
+            <p class="section-subtitle">
+              Treasured memories from brides, families, and patrons across the world who chose Avantika Saree Centre And Garments for their most poignant life milestones.
+            </p>
+          </div>
+
+          <div class="testimonials-grid" id="home-testimonials-grid">
+            <!-- Dynamically populated from TESTIMONIALS_DATA -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Instagram-Style Fashion Gallery -->
+      <section class="insta-section">
+        <div class="container" style="text-align: center; margin-bottom: 2rem;">
+          <div class="section-pretitle">Follow The Journey</div>
+          <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 0.35rem;">@Avantika.Saree.Centre • Thakur Churaha</h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Tag #AvantikaBride #AvantikaSareeCentre to be featured on our royal atelier wall.</p>
+        </div>
+
+        <div class="container">
+          <div class="insta-grid" id="home-instagram-grid">
+            <!-- Dynamically populated from INSTAGRAM_POSTS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- VIP Newsletter Signup Section -->
+      <section class="newsletter-section">
+        <div class="container">
+          <div class="newsletter-container">
+            <div class="section-pretitle" style="color: var(--gold-400);">Private Invocations</div>
+            <h2 class="newsletter-title">Enter The Royal Salon</h2>
+            <p class="newsletter-desc">
+              Subscribe for private previews of limited loom drops, bridal showcase invitations, and styling notes from our master drapers.
+            </p>
+            <form class="newsletter-form" id="newsletter-form">
+              <input type="email" class="newsletter-input" placeholder="Enter your email address" required />
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- =======================================================================
+         VIEW 2: PRODUCT LISTING / CATALOG
+         ======================================================================= -->
+    <section id="view-catalog" class="fade-in" style="display: none;">
+      <!-- Catalog Banner -->
+      <div class="catalog-banner">
+        <div class="container">
+          <div class="section-pretitle" style="color: var(--gold-400);">Curated Masterpieces</div>
+          <h1>All Ethnic Fashion & Sarees</h1>
+          <p>Hand-selected pure silks, bridal weaves, organza gossamers, and royal suiting direct from our looms.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Category Pill Navigation Bar -->
+        <div style="display: flex; gap: 0.75rem; overflow-x: auto; padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle);">
+          <button class="search-tag-pill active" data-filter-cat="all">All Creations</button>
+          <button class="search-tag-pill" data-filter-cat="sarees">Pure Silk Sarees</button>
+          <button class="search-tag-pill" data-filter-cat="bridal">Bridal Atelier</button>
+          <button class="search-tag-pill" data-filter-cat="lehengas">Couture Lehengas</button>
+          <button class="search-tag-pill" data-filter-cat="suits">Suits & Kurtis</button>
+          <button class="search-tag-pill" data-filter-cat="mens">Men's Royal Suiting</button>
+        </div>
+
+        <div class="catalog-layout">
+          <!-- Sidebar Filters -->
+          <aside class="filters-sidebar">
+            <div class="filters-header">
+              <h3 class="filters-title">Refine</h3>
+              <button class="btn-reset-filters" onclick="resetFilters()">Reset All</button>
+            </div>
+
+            <!-- Fabric Filter -->
+            <div class="filter-group">
+              <div class="filter-group-title">Fabric</div>
+              <ul class="filter-options-list">
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-fabric" value="Pure Katan Silk" />
+                    <span>Pure Katan Silk</span>
+                    <span class="filter-count">5</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-fabric" value="Organza" />
+                    <span>Silk Organza</span>
+                    <span class="filter-count">2</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-fabric" value="Tissue & Zari" />
+                    <span>Tissue & Zari</span>
+                    <span class="filter-count">2</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-fabric" value="Velvet" />
+                    <span>Velvet Brocade</span>
+                    <span class="filter-count">1</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-fabric" value="Raw Silk" />
+                    <span>Raw Silk & Suiting</span>
+                    <span class="filter-count">1</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-fabric" value="Chanderi" />
+                    <span>Chanderi & Georgette</span>
+                    <span class="filter-count">2</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Colour Filter -->
+            <div class="filter-group">
+              <div class="filter-group-title">Colour Shade</div>
+              <div class="color-swatches-grid">
+                <div class="color-swatch-chip" data-color-name="Crimson Red">
+                  <span class="color-swatch-circle" style="background-color: #8B1425;"></span>
+                  <span>Crimson</span>
+                </div>
+                <div class="color-swatch-chip" data-color-name="Ivory Cream">
+                  <span class="color-swatch-circle" style="background-color: #FAF6ED; border: 1px solid #ccc;"></span>
+                  <span>Ivory</span>
+                </div>
+                <div class="color-swatch-chip" data-color-name="Rose Gold">
+                  <span class="color-swatch-circle" style="background-color: #B76E79;"></span>
+                  <span>Rose Gold</span>
+                </div>
+                <div class="color-swatch-chip" data-color-name="Emerald Green">
+                  <span class="color-swatch-circle" style="background-color: #1B4D3E;"></span>
+                  <span>Emerald</span>
+                </div>
+                <div class="color-swatch-chip" data-color-name="Ruby Deep Red">
+                  <span class="color-swatch-circle" style="background-color: #680C1D;"></span>
+                  <span>Ruby</span>
+                </div>
+                <div class="color-swatch-chip" data-color-name="Champagne Gold">
+                  <span class="color-swatch-circle" style="background-color: #D8C59A;"></span>
+                  <span>Champagne</span>
+                </div>
+                <div class="color-swatch-chip" data-color-name="Peacock Blue">
+                  <span class="color-swatch-circle" style="background-color: #0D4F6A;"></span>
+                  <span>Peacock</span>
+                </div>
+                <div class="color-swatch-chip" data-color-name="Saffron Orange">
+                  <span class="color-swatch-circle" style="background-color: #E67E22;"></span>
+                  <span>Saffron</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price Filter Slider -->
+            <div class="filter-group">
+              <div class="filter-group-title">Price Range</div>
+              <div class="price-slider-wrap">
+                <input type="range" id="price-range-slider" class="price-slider" min="10000" max="60000" step="1000" value="60000" />
+                <div class="price-range-inputs">
+                  <span>Up to</span>
+                  <strong id="price-slider-display" style="color: var(--maroon-900); font-weight: 700;">₹60,000</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Occasion Filter -->
+            <div class="filter-group">
+              <div class="filter-group-title">Occasion</div>
+              <ul class="filter-options-list">
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-occasion" value="Bridal & Wedding" />
+                    <span>Bridal & Wedding</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-occasion" value="Reception" />
+                    <span>Reception Gala</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-occasion" value="Festive & Diwali" />
+                    <span>Festive & Diwali</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-occasion" value="Cocktails & Sangeet" />
+                    <span>Cocktails & Sangeet</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-occasion" value="Royal Soiree" />
+                    <span>Royal Soiree</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- Products Main Area -->
+          <div class="catalog-main">
+            <!-- Toolbar -->
+            <div class="catalog-toolbar">
+              <div class="results-count-text" id="catalog-results-count">
+                Showing creations
+              </div>
+              <div class="catalog-sort-wrap">
+                <span class="sort-label">Sort By:</span>
+                <select id="catalog-sort-select" class="sort-select">
+                  <option value="newest">Newest Additions</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="popularity">Most Coveted</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Active Filter Chips -->
+            <div class="active-filters-bar" id="catalog-active-chips"></div>
+
+            <!-- Product Grid -->
+            <div class="products-grid" id="catalog-products-grid">
+              <!-- Dynamically populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 3: PRODUCT DETAIL PAGE (PDP)
+         ======================================================================= -->
+    <section id="view-pdp" class="fade-in" style="display: none;">
+      <!-- Populated dynamically by renderPDPView() in js/app.js -->
+    </section>
+
+    <!-- =======================================================================
+         VIEW 4: CHECKOUT (VISUAL DEMO ONLY)
+         ======================================================================= -->
+    <section id="view-checkout" class="fade-in" style="display: none;">
+      <div class="checkout-section">
+        <div class="container">
+
+          <div class="checkout-banner-note">
+            <span style="font-size: 1.25rem;">🔒</span>
+            <div>
+              <strong>Visual Demonstration Checkout</strong> — No real payments, cards or sensitive information will be charged. Every step showcases luxury checkout UI.
+            </div>
+          </div>
+
+          <div id="checkout-empty-notice" style="display: none; text-align: center; padding: 4rem 1rem;">
+            <p style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--maroon-900); margin-bottom: 1rem;">Your Shopping Bag is Currently Empty</p>
+            <button class="btn-luxury-primary" onclick="navigateTo('catalog')">Explore Creations</button>
+          </div>
+
+          <div class="checkout-grid" id="checkout-main-grid">
+
+            <!-- Checkout Form Column -->
+            <form id="checkout-form">
+              <!-- Step 1: Contact & Delivery -->
+              <div class="checkout-card">
+                <h3 class="checkout-card-header">
+                  <span class="step-num">1</span>
+                  Delivery Destination
+                </h3>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">First Name *</label>
+                    <input type="text" class="form-input" required value="Ananya" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Last Name *</label>
+                    <input type="text" class="form-input" required value="Singhania" />
+                  </div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Email Address *</label>
+                    <input type="email" class="form-input" required value="ananya.singhania@heritage.in" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-input" required value="+91 98765 43210" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Street Address *</label>
+                  <input type="text" class="form-input" required value="Bungalow 7, Altamount Road, Malabar Hill" />
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Postal Pincode *</label>
+                    <input type="text" class="form-input" required value="400026" maxlength="6" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">City *</label>
+                    <input type="text" class="form-input" required value="Mumbai" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">State *</label>
+                  <select class="form-select">
+                    <option selected>Maharashtra</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Delhi NCR</option>
+                    <option>Karnataka</option>
+                    <option>Tamil Nadu</option>
+                    <option>West Bengal</option>
+                    <option>Gujarat</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Step 2: Delivery Speed Selection -->
+              <div class="checkout-card">
+                <h3 class="checkout-card-header">
+                  <span class="step-num">2</span>
+                  Courier Method
+                </h3>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                  <label style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; border: 1px solid var(--maroon-700); border-radius: var(--radius-xs); background: var(--maroon-50); cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                      <input type="radio" name="shipping-method" checked style="accent-color: var(--maroon-800);" />
+                      <div>
+                        <strong style="font-size: 0.85rem; color: var(--maroon-900);">Royal White-Glove Delivery (Complimentary)</strong>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Dispatched in signature rigid gold-embossed keepsake chest. Delivery within 3 business days.</p>
+                      </div>
+                    </div>
+                    <span style="font-weight: 700; color: #2E7D32; font-size: 0.82rem;">FREE</span>
+                  </label>
+
+                  <label style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-xs); cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                      <input type="radio" name="shipping-method" style="accent-color: var(--maroon-800);" />
+                      <div>
+                        <strong style="font-size: 0.85rem; color: var(--maroon-900);">Same-Day Boutique Courier (Kanpur & Lucknow Metro)</strong>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Direct delivery by bespoke atelier courier from Thakur Churaha flagship.</p>
+                      </div>
+                    </div>
+                    <span style="font-weight: 600; font-size: 0.82rem;">₹500</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 3: Payment Options UI (Demonstration) -->
+              <div class="checkout-card">
+                <h3 class="checkout-card-header">
+                  <span class="step-num">3</span>
+                  Payment Selection
+                </h3>
+
+                <!-- Payment Tabs -->
+                <div class="payment-tabs-header">
+                  <button type="button" class="payment-tab-btn active" data-payment-tab="upi">UPI / QR</button>
+                  <button type="button" class="payment-tab-btn" data-payment-tab="card">Credit / Debit Card</button>
+                  <button type="button" class="payment-tab-btn" data-payment-tab="netbanking">Net Banking</button>
+                  <button type="button" class="payment-tab-btn" data-payment-tab="cod">Cash on Delivery</button>
+                </div>
+
+                <!-- UPI Panel -->
+                <div class="payment-tab-panel active" id="payment-panel-upi">
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">
+                    Instant zero-fee transfer via Google Pay, PhonePe, Paytm, or any BHIM UPI app.
+                  </p>
+                  <div class="form-group">
+                    <label class="form-label">Virtual Payment Address (UPI ID)</label>
+                    <input type="text" class="form-input" placeholder="e.g. ananya@okhdfcbank" value="ananya@okaxis" />
+                  </div>
+                  <div style="display: flex; gap: 0.75rem; align-items: center; background: var(--bg-sand); padding: 0.75rem 1rem; border-radius: var(--radius-xs);">
+                    <span style="font-size: 1.25rem;">📱</span>
+                    <span style="font-size: 0.75rem; color: var(--text-charcoal);">Dynamic QR code will generate on demo confirmation.</span>
+                  </div>
+                </div>
+
+                <!-- Card Panel -->
+                <div class="payment-tab-panel" id="payment-panel-card">
+                  <div class="form-group">
+                    <label class="form-label">Card Number</label>
+                    <input type="text" class="form-input" placeholder="4111 •••• •••• 1111" value="4532 •••• •••• 8892" />
+                  </div>
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label class="form-label">Expiry Date</label>
+                      <input type="text" class="form-input" placeholder="MM/YY" value="08/29" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Security CVV</label>
+                      <input type="password" class="form-input" placeholder="•••" value="789" maxlength="4" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Net Banking Panel -->
+                <div class="payment-tab-panel" id="payment-panel-netbanking">
+                  <div class="form-group">
+                    <label class="form-label">Select Bank</label>
+                    <select class="form-select">
+                      <option>HDFC Bank (Preferred)</option>
+                      <option>ICICI Bank</option>
+                      <option>State Bank of India</option>
+                      <option>Axis Bank</option>
+                      <option>Kotak Mahindra Bank</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- COD Panel -->
+                <div class="payment-tab-panel" id="payment-panel-cod">
+                  <p style="font-size: 0.82rem; color: var(--text-charcoal); line-height: 1.6;">
+                    Pay via Cash, UPI or Card at the time of white-glove doorstep delivery. Verification OTP will be sent to your registered mobile number upon dispatch.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn-place-demo-order">
+                Complete Demo Order & Receive Receipt
+              </button>
+            </form>
+
+            <!-- Order Summary Sticky Card -->
+            <div class="order-review-card">
+              <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--maroon-900); margin-bottom: 1.25rem;">
+                Order Summary
+              </h3>
+
+              <div class="order-items-scroll" id="checkout-items-list">
+                <!-- Dynamically populated from cart -->
+              </div>
+
+              <!-- Promo Code -->
+              <div class="order-promo-box">
+                <input type="text" id="promo-code-input" class="form-input" placeholder="Promo Code (e.g. AVANTIKA10)" />
+                <button type="button" class="btn-apply-promo" onclick="applyPromoCode()">Apply</button>
+              </div>
+              <div id="promo-code-feedback" style="font-size: 0.75rem; margin-top: -1rem; margin-bottom: 1rem; display: none;"></div>
+
+              <!-- Calculations -->
+              <div class="cart-summary-row">
+                <span>Bag Subtotal</span>
+                <span id="checkout-subtotal">₹0</span>
+              </div>
+              <div class="cart-summary-row">
+                <span>Insured White-Glove Shipping</span>
+                <span style="color: #2E7D32; font-weight: 600;">FREE</span>
+              </div>
+              <div class="cart-summary-row">
+                <span>Privilege Discount</span>
+                <span id="checkout-discount" style="color: #2E7D32; font-weight: 600;">₹0</span>
+              </div>
+              <div class="cart-summary-row">
+                <span>All Government Taxes (GST)</span>
+                <span>Included</span>
+              </div>
+
+              <div class="cart-total-row">
+                <span>Estimated Total</span>
+                <span id="checkout-total">₹0</span>
+              </div>
+
+              <div style="font-size: 0.72rem; color: var(--text-light); text-align: center; margin-top: 1rem;">
+                🛡 All items covered by Avantika Saree Centre And Garments 100% Heirloom Authenticity Promise
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       CART DRAWER COMPONENT
+       ========================================================================= -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag Drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">
+        <span>Shopping Bag</span>
+        <span style="font-size: 0.85rem; color: var(--gold-700);">❦</span>
+      </h3>
+      <button class="btn-drawer-close" aria-label="Close Shopping Bag">&times;</button>
+    </div>
+
+    <!-- Free Delivery Progress Meter -->
+    <div class="shipping-meter-wrap">
+      <div id="shipping-meter-text">Add ₹25,000 for Complimentary Insured Courier</div>
+      <div class="shipping-meter-bar">
+        <div class="shipping-meter-progress" id="shipping-meter-progress" style="width: 74%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll List -->
+    <div class="cart-drawer-body" id="cart-drawer-items-list">
+      <!-- Populated dynamically by renderCartDrawerContent() in js/app.js -->
+    </div>
+
+    <!-- Cart Footer Summary & Checkout Button -->
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>White-Glove Shipping</span>
+        <span style="color: #2E7D32; font-weight: 600;">FREE</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Total Payable</span>
+        <span id="cart-total-val">₹0</span>
+      </div>
+
+      <button class="btn-checkout-drawer" onclick="closeAllDrawers(); navigateTo('checkout');">
+        Proceed to Checkout
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       SEARCH OVERLAY MODAL
+       ========================================================================= -->
+  <div class="search-modal" id="search-modal">
+    <div class="search-modal-inner">
+      <div class="search-header-row">
+        <button class="btn-close-search" id="btn-close-search">
+          <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;">Close</span>
+          &times;
+        </button>
+      </div>
+
+      <div class="search-input-wrap">
+        <input type="text" id="search-main-input" class="search-main-input" placeholder="Search by silk weave, color, bridal motif..." />
+      </div>
+
+      <div class="search-tags-list">
+        <span class="search-tags-label">Trending Inquiries:</span>
+        <span class="search-tag-pill" data-tag-term="Banarasi">Banarasi</span>
+        <span class="search-tag-pill" data-tag-term="Organza">Organza</span>
+        <span class="search-tag-pill" data-tag-term="Bridal">Bridal Weaves</span>
+        <span class="search-tag-pill" data-tag-term="Tissue">Tissue Saree</span>
+        <span class="search-tag-pill" data-tag-term="Kanjivaram">Kanjivaram</span>
+        <span class="search-tag-pill" data-tag-term="Lehenga">Velvet Lehenga</span>
+        <span class="search-tag-pill" data-tag-term="Sherwani">Men's Suiting</span>
+      </div>
+
+      <!-- Search Results Grid -->
+      <div class="search-results-grid" id="search-results-grid"></div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       ORDER SUCCESS CONFIRMATION MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="order-success-modal">
+    <div class="modal-dialog">
+      <div class="modal-success-badge">❦</div>
+      <h3 style="font-family: var(--font-serif); font-size: 1.85rem; color: var(--maroon-900); margin-bottom: 0.5rem;">
+        Congratulations!
+      </h3>
+      <p style="font-size: 0.9rem; color: var(--text-charcoal); line-height: 1.6;">
+        Your demonstration order has been graciously registered with our master atelier.
+      </p>
+
+      <div class="modal-order-receipt">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span style="color: var(--text-light);">Order Reference:</span>
+          <strong id="modal-order-number" style="color: var(--maroon-900); font-family: var(--font-cinzel);">AVAN-2026-8941</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span style="color: var(--text-light);">Estimated White-Glove Dispatch:</span>
+          <span id="modal-order-date" style="font-weight: 600;">October 4, 2026</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span style="color: var(--text-light);">Fulfillment Boutique:</span>
+          <span>Avantika Saree Centre, Thakur Churaha</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle);">
+          <span style="font-weight: 600;">Demonstration Total:</span>
+          <strong id="modal-order-total" style="color: var(--maroon-800); font-size: 1.05rem;">₹18,500</strong>
+        </div>
+      </div>
+
+      <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        A demonstration confirmation receipt has been simulated. No actual payment has been deducted.
+      </p>
+
+      <button class="btn-luxury-primary" style="width: 100%;" onclick="closeOrderModal()">
+        Return to Atelier Home
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FLAGSHIP BRIDAL CONSULTATION MODAL (Bio Homage)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="consultation-modal">
+    <div class="modal-dialog" style="max-width: 600px; text-align: left;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <div>
+          <span style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-800); font-weight: 700;">Flagship Experience</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--maroon-900);">Book Bridal Consultation</h3>
+        </div>
+        <button class="btn-drawer-close" onclick="closeConsultationModal()">&times;</button>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        Schedule a private one-on-one bridal styling and trousseau consultation at our heritage showroom at <strong>Thakur Churaha</strong> or via virtual video appointment.
+      </p>
+
+      <form onsubmit="event.preventDefault(); showToast('Appointment requested! Our bridal stylist will reach out.'); closeConsultationModal();">
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-input" required placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mobile Number</label>
+            <input type="tel" class="form-input" required placeholder="+91" />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label">Wedding Date</label>
+            <input type="date" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Consultation Type</label>
+            <select class="form-select">
+              <option>In-Person: Thakur Churaha Flagship Boutique</option>
+              <option>Virtual Video Styling Call (Worldwide)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Categories of Interest</label>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.78rem; margin-top: 0.25rem;">
+            <label><input type="checkbox" checked /> Bridal Sarees</label>
+            <label><input type="checkbox" checked /> Bridal Lehengas</label>
+            <label><input type="checkbox" /> Suits & Kurtis</label>
+            <label><input type="checkbox" /> Men's Suiting / Sherwani</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-luxury-primary" style="width: 100%; margin-top: 1rem;">
+          Confirm Consultation Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- =========================================================================
+       PREMIUM FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+
+        <!-- Column 1: Brand & Bio Homage -->
+        <div class="footer-brand">
+          <h3 style="font-size: 1.45rem; line-height: 1.3;">AVANTIKA SAREE CENTRE & GARMENTS</h3>
+          <div class="tagline">Flagship Boutique • Thakur Churaha</div>
+          <p>
+            An ode to India's eternal textile heritage. Handcrafted Banarasi silks, Kanjivaram heirlooms, bridal lehengas, and royal ethnic attire woven with honor, best quality and direct wholesale integrity.
+          </p>
+
+          <div class="footer-store-highlight">
+            <h5>📍 Thakur Churaha Flagship Boutique</h5>
+            <p>Designer Sarees • Bridal Lehengas • Suits & Kurtis • Men's Suiting</p>
+            <p style="margin-top: 4px; color: var(--gold-400); font-weight: 500;">Wholesale Value & Best Quality Guaranteed</p>
+          </div>
+        </div>
+
+        <!-- Column 2: Collections -->
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <ul class="footer-links-list">
+            <li><a href="#" data-nav="catalog" data-nav-param="sarees">Banarasi Katan Silks</a></li>
+            <li><a href="#" data-nav="catalog" data-nav-param="sarees">Kanjivaram Brocades</a></li>
+            <li><a href="#" data-nav="catalog" data-nav-param="bridal">Bridal Sarees & Trousseau</a></li>
+            <li><a href="#" data-nav="catalog" data-nav-param="lehengas">Zardozi Bridal Lehengas</a></li>
+            <li><a href="#" data-nav="catalog" data-nav-param="suits">Designer Suits & Kurtis</a></li>
+            <li><a href="#" data-nav="catalog" data-nav-param="mens">Men's Royal Suiting</a></li>
+            <li><a href="#" data-nav="catalog">Organza & Festive Edit</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: The Atelier -->
+        <div class="footer-col">
+          <h4>The Atelier</h4>
+          <ul class="footer-links-list">
+            <li><a href="#editorial-heritage" onclick="scrollToHeritage(event)">Our Weaving Heritage</a></li>
+            <li><a href="#" onclick="event.preventDefault(); openConsultationModal();">Book Bridal Appointment</a></li>
+            <li><a href="#" onclick="event.preventDefault(); showToast('Silk Mark certification authenticated on all garments.');">Silk Mark Authenticity</a></li>
+            <li><a href="#" onclick="event.preventDefault(); showToast('Artisan direct: No middlemen, fair master artisan wages.');">Direct Weaver Guild</a></li>
+            <li><a href="#" onclick="event.preventDefault(); showToast('White-glove courier packaging included.');">Care & Keepsake Boxes</a></li>
+            <li><a href="#" onclick="event.preventDefault(); showToast('Demonstration store notice.');">Demonstration Notice</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Customer Care & Hours -->
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links-list">
+            <li><span>Concierge: concierge@avantikasareecentre.in</span></li>
+            <li><span>WhatsApp Styling: +91 98765 43210</span></li>
+            <li><span>Showroom Hours: Mon - Sun, 10:30 AM - 9:00 PM</span></li>
+            <li><span>Location: Thakur Churaha, Kanpur</span></li>
+            <li><span style="color: var(--gold-300);">Facebook: Avantika saree centre and garments9</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Avantika Saree Centre And Garments. All rights reserved. Handcrafted in India.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#" onclick="event.preventDefault(); showToast('Privacy Policy: Demo mode only.');">Privacy Policy</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Terms of Service: Demo mode only.');">Terms of Service</a>
+          <a href="#" onclick="event.preventDefault(); showToast('White-glove shipping insured across India.');">Shipping & Returns</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    function openConsultationModal() {
+      document.getElementById('consultation-modal').classList.add('active');
+    }
+    function closeConsultationModal() {
+      document.getElementById('consultation-modal').classList.remove('active');
+    }
+    function scrollToHeritage(e) {
+      if (e) e.preventDefault();
+      if (AppState.currentView !== 'home') {
+        navigateTo('home');
+        setTimeout(() => {
+          document.getElementById('editorial-heritage')?.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      } else {
+        document.getElementById('editorial-heritage')?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>

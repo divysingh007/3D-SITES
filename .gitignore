@@ -1,0 +1,13 @@
+# OS & Editor junk
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp files
+*.tmp
