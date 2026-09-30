@@ -105,24 +105,39 @@
   <!-- Mobile Navigation Drawer -->
   <div class="mobile-nav-drawer" id="mobile-nav-drawer">
     <div class="mobile-nav-header">
-      <span class="brand-logo" style="font-size: 1.35rem;">AVANTIKA</span>
-      <button class="btn-drawer-close" onclick="closeMobileMenu()">&times;</button>
+      <div style="display: flex; flex-direction: column;">
+        <span class="brand-logo" style="font-size: 1.35rem; line-height: 1;">AVANTIKA</span>
+        <span style="font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-800); margin-top: 2px;">Saree Centre & Garments</span>
+      </div>
+      <button class="btn-drawer-close" onclick="closeMobileMenu()" aria-label="Close Menu">&times;</button>
     </div>
     <ul class="mobile-nav-links">
       <li><a href="#" class="mobile-nav-link" data-nav="home">Home</a></li>
-      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="new">New Arrivals</a></li>
-      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="sarees">Sarees</a></li>
+      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="new">New Arrivals <span class="nav-badge-new">New</span></a></li>
+      <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="sarees">Designer Sarees</a></li>
       <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="bridal">Bridal Atelier</a></li>
       <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="lehengas">Bridal Lehengas</a></li>
       <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="suits">Suits & Kurtis</a></li>
       <li><a href="#" class="mobile-nav-link" data-nav="catalog" data-nav-param="mens">Men's Suiting</a></li>
       <li><a href="#" class="mobile-nav-link" data-nav="catalog">All Collections</a></li>
-      <li><a href="#editorial-heritage" class="mobile-nav-link" onclick="closeMobileMenu(); scrollToHeritage(event);">Avantika Heritage</a></li>
+      <li><a href="#editorial-heritage" class="mobile-nav-link" onclick="closeMobileMenu(); scrollToHeritage(event);">Heritage Story</a></li>
     </ul>
-    <div style="margin-top: auto; padding-top: 2rem; border-top: 1px solid var(--border-subtle); font-size: 0.75rem; color: var(--text-muted);">
-      <strong>Flagship Boutique</strong><br />
-      Thakur Churaha, Kanpur<br />
-      Wholesale & Bespoke Couture
+
+    <!-- Quick Mobile Boutique Actions -->
+    <div class="mobile-drawer-contact-box">
+      <div style="font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-800); font-weight: 700; margin-bottom: 0.5rem;">
+        Boutique Concierge
+      </div>
+      <button class="btn-mobile-drawer-action" onclick="closeMobileMenu(); openConsultationModal();">
+        <span>✨</span> Book Bridal Appointment
+      </button>
+      <a href="tel:+919876543210" class="btn-mobile-drawer-action" style="margin-top: 0.4rem;">
+        <span>📞</span> Call: +91 98765 43210
+      </a>
+      <div style="margin-top: 0.85rem; font-size: 0.72rem; color: var(--text-muted); line-height: 1.4;">
+        📍 <strong>Thakur Churaha</strong>, Kanpur<br />
+        Wholesale Transparency • 10:30 AM - 9 PM
+      </div>
     </div>
   </div>
 
@@ -413,6 +428,25 @@
           <button class="search-tag-pill" data-filter-cat="mens">Men's Royal Suiting</button>
         </div>
 
+        <!-- Mobile Filter & Sort Action Bar (Visible only on mobile devices) -->
+        <div class="mobile-filter-bar">
+          <button type="button" class="btn-mobile-filter" onclick="openMobileFilterDrawer()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+            Filter & Refine
+            <span class="mobile-filter-count-badge" id="mobile-filter-active-count" style="display: none;">0</span>
+          </button>
+          <div class="mobile-sort-container">
+            <select id="mobile-catalog-sort-select" class="mobile-sort-select" onchange="syncMobileSort(this.value)">
+              <option value="newest">Sort: Newest</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="popularity">Most Coveted</option>
+            </select>
+          </div>
+        </div>
+
         <div class="catalog-layout">
           <!-- Sidebar Filters -->
           <aside class="filters-sidebar">
@@ -558,6 +592,153 @@
               </ul>
             </div>
           </aside>
+
+          <!-- Mobile Filter Drawer Modal -->
+          <div class="mobile-filter-drawer" id="mobile-filter-drawer">
+            <div class="mobile-filter-drawer-header">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-size: 1.1rem; color: var(--gold-700);">⚜</span>
+                <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--maroon-900); margin: 0;">Refine Collection</h3>
+              </div>
+              <button class="btn-drawer-close" onclick="closeMobileFilterDrawer()">&times;</button>
+            </div>
+            <div class="mobile-filter-drawer-body">
+              <!-- Fabric Filter -->
+              <div class="filter-group">
+                <div class="filter-group-title">Fabric</div>
+                <ul class="filter-options-list">
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-fabric" value="Pure Katan Silk" onchange="syncMobileFilters()" />
+                      <span>Pure Katan Silk</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-fabric" value="Organza" onchange="syncMobileFilters()" />
+                      <span>Silk Organza</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-fabric" value="Tissue & Zari" onchange="syncMobileFilters()" />
+                      <span>Tissue & Zari</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-fabric" value="Velvet" onchange="syncMobileFilters()" />
+                      <span>Velvet Brocade</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-fabric" value="Raw Silk" onchange="syncMobileFilters()" />
+                      <span>Raw Silk & Suiting</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-fabric" value="Chanderi" onchange="syncMobileFilters()" />
+                      <span>Chanderi & Georgette</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Colour Filter -->
+              <div class="filter-group">
+                <div class="filter-group-title">Colour Shade</div>
+                <div class="color-swatches-grid">
+                  <div class="color-swatch-chip" data-color-name="Crimson Red" onclick="toggleMobileColor(this, 'Crimson Red')">
+                    <span class="color-swatch-circle" style="background-color: #8B1425;"></span>
+                    <span>Crimson</span>
+                  </div>
+                  <div class="color-swatch-chip" data-color-name="Ivory Cream" onclick="toggleMobileColor(this, 'Ivory Cream')">
+                    <span class="color-swatch-circle" style="background-color: #FAF6ED; border: 1px solid #ccc;"></span>
+                    <span>Ivory</span>
+                  </div>
+                  <div class="color-swatch-chip" data-color-name="Rose Gold" onclick="toggleMobileColor(this, 'Rose Gold')">
+                    <span class="color-swatch-circle" style="background-color: #B76E79;"></span>
+                    <span>Rose Gold</span>
+                  </div>
+                  <div class="color-swatch-chip" data-color-name="Emerald Green" onclick="toggleMobileColor(this, 'Emerald Green')">
+                    <span class="color-swatch-circle" style="background-color: #1B4D3E;"></span>
+                    <span>Emerald</span>
+                  </div>
+                  <div class="color-swatch-chip" data-color-name="Ruby Deep Red" onclick="toggleMobileColor(this, 'Ruby Deep Red')">
+                    <span class="color-swatch-circle" style="background-color: #680C1D;"></span>
+                    <span>Ruby</span>
+                  </div>
+                  <div class="color-swatch-chip" data-color-name="Champagne Gold" onclick="toggleMobileColor(this, 'Champagne Gold')">
+                    <span class="color-swatch-circle" style="background-color: #D8C59A;"></span>
+                    <span>Champagne</span>
+                  </div>
+                  <div class="color-swatch-chip" data-color-name="Peacock Blue" onclick="toggleMobileColor(this, 'Peacock Blue')">
+                    <span class="color-swatch-circle" style="background-color: #0D4F6A;"></span>
+                    <span>Peacock</span>
+                  </div>
+                  <div class="color-swatch-chip" data-color-name="Saffron Orange" onclick="toggleMobileColor(this, 'Saffron Orange')">
+                    <span class="color-swatch-circle" style="background-color: #E67E22;"></span>
+                    <span>Saffron</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Price Range Slider -->
+              <div class="filter-group">
+                <div class="filter-group-title">Maximum Price</div>
+                <div class="price-slider-wrap">
+                  <input type="range" id="mobile-price-slider" class="price-slider" min="10000" max="60000" step="1000" value="60000" oninput="syncMobilePrice(this.value)" />
+                  <div class="price-range-inputs">
+                    <span>Budget Up to:</span>
+                    <strong id="mobile-price-slider-display" style="color: var(--maroon-900); font-weight: 700;">₹60,000</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Occasion Filter -->
+              <div class="filter-group">
+                <div class="filter-group-title">Occasion</div>
+                <ul class="filter-options-list">
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-occasion" value="Bridal & Wedding" onchange="syncMobileFilters()" />
+                      <span>Bridal & Wedding</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-occasion" value="Reception" onchange="syncMobileFilters()" />
+                      <span>Reception Gala</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-occasion" value="Festive & Diwali" onchange="syncMobileFilters()" />
+                      <span>Festive & Diwali</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-occasion" value="Cocktails & Sangeet" onchange="syncMobileFilters()" />
+                      <span>Cocktails & Sangeet</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filter-checkbox-label">
+                      <input type="checkbox" name="m-filter-occasion" value="Royal Soiree" onchange="syncMobileFilters()" />
+                      <span>Royal Soiree</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mobile-filter-drawer-footer">
+              <button type="button" class="btn-luxury-secondary" style="flex: 1; padding: 0.8rem;" onclick="resetFilters(); closeMobileFilterDrawer();">Reset</button>
+              <button type="button" class="btn-luxury-primary" style="flex: 2; padding: 0.8rem;" onclick="closeMobileFilterDrawer();">Show Results</button>
+            </div>
+          </div>
 
           <!-- Products Main Area -->
           <div class="catalog-main">
@@ -1101,6 +1282,69 @@
     </div>
   </footer>
 
+  <!-- Fixed Luxury Mobile Bottom App Bar -->
+  <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Mobile Navigation">
+    <a href="#" class="mobile-bottom-item active" data-nav="home" id="mb-nav-home">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="#" class="mobile-bottom-item" data-nav="catalog" id="mb-nav-shop">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+      <span>Shop</span>
+    </a>
+    <a href="#" class="mobile-bottom-item" id="mb-nav-search" onclick="event.preventDefault(); document.getElementById('btn-open-search').click();">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <span>Search</span>
+    </a>
+    <a href="#" class="mobile-bottom-item" id="mb-nav-wishlist" onclick="event.preventDefault(); navigateTo('catalog');">
+      <div style="position: relative; display: inline-flex;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <span class="mobile-badge" id="mobile-wishlist-badge">0</span>
+      </div>
+      <span>Wishlist</span>
+    </a>
+    <a href="#" class="mobile-bottom-item" id="mb-nav-cart" onclick="event.preventDefault(); openCartDrawer();">
+      <div style="position: relative; display: inline-flex;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="mobile-badge" id="mobile-cart-badge">0</span>
+      </div>
+      <span>Bag</span>
+    </a>
+  </nav>
+
+  <!-- Mobile Sticky PDP Bottom Action Bar -->
+  <div class="mobile-pdp-sticky-bar" id="mobile-pdp-sticky-bar" style="display: none;">
+    <div class="sticky-pdp-details">
+      <span class="sticky-pdp-price" id="mobile-sticky-pdp-price">₹18,500</span>
+      <span class="sticky-pdp-note">White-Glove Insured Delivery</span>
+    </div>
+    <div style="display: flex; gap: 0.5rem;">
+      <button class="btn-card-quick-add" style="padding: 0.75rem 1.25rem; font-size: 0.78rem;" onclick="addCurrentPDPToCart()">
+        Add to Bag
+      </button>
+      <button class="btn-card-quick-view" style="padding: 0.75rem 1.25rem; background: var(--gold-600); color: var(--maroon-900); font-size: 0.78rem;" onclick="buyNowCurrentPDP()">
+        Buy Now
+      </button>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="js/products.js"></script>
   <script src="js/app.js"></script>
@@ -1120,6 +1364,73 @@
         }, 150);
       } else {
         document.getElementById('editorial-heritage')?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    function openMobileFilterDrawer() {
+      document.getElementById('mobile-filter-drawer').classList.add('active');
+      document.getElementById('drawer-overlay').classList.add('active');
+    }
+    function closeMobileFilterDrawer() {
+      document.getElementById('mobile-filter-drawer').classList.remove('active');
+      document.getElementById('drawer-overlay').classList.remove('active');
+    }
+    function syncMobileSort(val) {
+      AppState.filters.sort = val;
+      const desktopSort = document.getElementById('catalog-sort-select');
+      if (desktopSort) desktopSort.value = val;
+      renderCatalogProducts();
+    }
+    function syncMobilePrice(val) {
+      AppState.filters.maxPrice = Number(val);
+      const display = document.getElementById('mobile-price-slider-display');
+      if (display) display.textContent = formatINR(val);
+      const desktopSlider = document.getElementById('price-range-slider');
+      const desktopDisplay = document.getElementById('price-slider-display');
+      if (desktopSlider) desktopSlider.value = val;
+      if (desktopDisplay) desktopDisplay.textContent = formatINR(val);
+      renderCatalogProducts();
+    }
+    function syncMobileFilters() {
+      const selectedFabric = Array.from(document.querySelectorAll('input[name="m-filter-fabric"]:checked')).map(cb => cb.value);
+      const selectedOccasion = Array.from(document.querySelectorAll('input[name="m-filter-occasion"]:checked')).map(cb => cb.value);
+      AppState.filters.fabric = selectedFabric;
+      AppState.filters.occasion = selectedOccasion;
+
+      // Sync desktop checkboxes
+      document.querySelectorAll('input[name="filter-fabric"]').forEach(cb => {
+        cb.checked = selectedFabric.includes(cb.value);
+      });
+      document.querySelectorAll('input[name="filter-occasion"]').forEach(cb => {
+        cb.checked = selectedOccasion.includes(cb.value);
+      });
+
+      renderCatalogProducts();
+    }
+    function toggleMobileColor(chip, colorVal) {
+      const idx = AppState.filters.color.indexOf(colorVal);
+      if (idx > -1) {
+        AppState.filters.color.splice(idx, 1);
+        chip.classList.remove('active');
+      } else {
+        AppState.filters.color.push(colorVal);
+        chip.classList.add('active');
+      }
+      // Sync desktop chip
+      document.querySelectorAll('.color-swatches-grid .color-swatch-chip').forEach(c => {
+        if (c.getAttribute('data-color-name') === colorVal) {
+          c.classList.toggle('active', AppState.filters.color.includes(colorVal));
+        }
+      });
+      renderCatalogProducts();
+    }
+    function addCurrentPDPToCart() {
+      if (AppState.activeProductId) {
+        addPDPToCart(AppState.activeProductId);
+      }
+    }
+    function buyNowCurrentPDP() {
+      if (AppState.activeProductId) {
+        buyNowPDP(AppState.activeProductId);
       }
     }
   </script>

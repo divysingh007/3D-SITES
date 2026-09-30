@@ -15,11 +15,13 @@ A complete, premium frontend-only e-commerce website for **Avantika Saree Centre
 
 ## ✦ Key Features & Pages
 
-### 1. Luxury Navbar & Header
+### 1. Luxury Navbar & Mobile-First Navigation
 - **Avantika Saree Centre & Garments** logo with royal insignia and *Thakur Churaha* subtitle.
-- Navigation links for **New Arrivals**, **Sarees**, **Bridal**, **Lehengas**, **Collections**, and **About**.
-- Interactive icons for **Live Search Overlay**, **Wishlist (with badge count)**, and **Shopping Bag (with item count)**.
-- Mobile-friendly responsive hamburger menu and slide-out navigation drawer.
+- **Fixed Mobile Bottom App Bar**: One-thumb navigation on phones (Home, Shop, Search, Wishlist with badge, Bag with badge).
+- **Responsive Navigation Drawer**: Full mobile drawer with instant direct-action buttons (Book Bridal Consultation, Call Boutique, Thakur Churaha showroom details).
+- **Mobile Filter & Refine Drawer**: Slide-out filter panel on phones with live category, fabric, color, price slider, and occasion filters.
+- **Sticky PDP Action Bar**: Floating bottom purchase bar on mobile for instant "Add to Bag" and "Buy Now".
+- **iOS & Android Optimization**: 16px inputs (prevents iOS auto-zoom), 44px+ touch targets, `env(safe-area-inset-bottom)` support, and sharp 2-column mobile product cards.
 
 ### 2. Editorial Homepage
 - **Cinematic Hero Banner:** Featuring luxury saree photography, *"Timeless Indian Elegance"*, and quick CTAs to *"Shop Collection"* & *"Explore Bridal"*.

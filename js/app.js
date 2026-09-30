@@ -138,6 +138,31 @@ function renderCurrentView() {
     checkoutView.style.display = 'block';
     renderCheckoutView();
   }
+
+  // Handle Mobile Sticky PDP Bar
+  const stickyPDPBar = document.getElementById('mobile-pdp-sticky-bar');
+  if (stickyPDPBar) {
+    if (AppState.currentView === 'pdp') {
+      const activeProd = PRODUCTS_DATA.find(p => p.id === AppState.activeProductId) || PRODUCTS_DATA[0];
+      const priceDisplay = document.getElementById('mobile-sticky-pdp-price');
+      if (priceDisplay && activeProd) priceDisplay.textContent = formatINR(activeProd.price);
+      stickyPDPBar.style.display = 'flex';
+    } else {
+      stickyPDPBar.style.display = 'none';
+    }
+  }
+
+  // Update mobile bottom nav active classes
+  document.querySelectorAll('.mobile-bottom-item').forEach(item => {
+    const navAttr = item.getAttribute('data-nav');
+    if (navAttr) {
+      if (navAttr === AppState.currentView) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    }
+  });
 }
 
 // ==========================================================================
@@ -480,6 +505,17 @@ function renderCatalogProducts() {
       window._activeChips = chips;
     } else {
       activeChipsBar.innerHTML = '';
+    }
+
+    // Update Mobile Filter Count Badge
+    const mobileFilterCountBadge = document.getElementById('mobile-filter-active-count');
+    if (mobileFilterCountBadge) {
+      if (chips.length > 0) {
+        mobileFilterCountBadge.textContent = chips.length;
+        mobileFilterCountBadge.style.display = 'inline-flex';
+      } else {
+        mobileFilterCountBadge.style.display = 'none';
+      }
     }
   }
 
@@ -1033,11 +1069,16 @@ function renderCartDrawerContent() {
 
 function updateCartBadge() {
   const badge = document.getElementById('nav-cart-badge');
-  if (!badge) return;
+  const mobileBadge = document.getElementById('mobile-cart-badge');
   const totalCount = AppState.cart.reduce((sum, item) => sum + item.quantity, 0);
-  badge.textContent = totalCount;
-  badge.classList.add('badge-bounce');
-  setTimeout(() => badge.classList.remove('badge-bounce'), 350);
+  if (badge) {
+    badge.textContent = totalCount;
+    badge.classList.add('badge-bounce');
+    setTimeout(() => badge.classList.remove('badge-bounce'), 350);
+  }
+  if (mobileBadge) {
+    mobileBadge.textContent = totalCount;
+  }
 }
 
 // ==========================================================================
@@ -1066,8 +1107,9 @@ function toggleWishlist(productId) {
 
 function updateWishlistBadge() {
   const badge = document.getElementById('nav-wishlist-badge');
-  if (!badge) return;
-  badge.textContent = AppState.wishlist.length;
+  const mobileBadge = document.getElementById('mobile-wishlist-badge');
+  if (badge) badge.textContent = AppState.wishlist.length;
+  if (mobileBadge) mobileBadge.textContent = AppState.wishlist.length;
 }
 
 // ==========================================================================
